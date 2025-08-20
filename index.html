@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>REFRIGERAÇÃO RUFINO — Conserto de Geladeiras e Ar-Condicionado</title>
+  <meta name="description" content="Assistência técnica especializada em refrigeradores e ar-condicionado. Atendimento rápido, garantia de serviço e preço justo." />
+  <meta property="og:title" content="RUFINO REFRIGERAÇÃO — Refrigeração & Climatização" />
+  <meta property="og:description" content="Conserto, instalação e manutenção de geladeiras e ar-condicionado. Atendimento em todo Rio de Janeiro" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%230ea5e9' d='M18 8h28a6 6 0 0 1 6 6v36a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6V14a6 6 0 0 1 6-6z'/%3E%3Cpath fill='%23fff' d='M30 14h4v36h-4zM20 30h24v4H20z'/%3E%3C/svg%3E" />
+  <style>
+    :root{
+      --bg: #0b1220;           /* fundo escuro elegante */
+      --bg-soft: #0f172a;      /* painéis */
+      --grad-a: #0ea5e9;       /* azul claro */
+      --grad-b: #22d3ee;       /* ciano */
+      --text: #e5e7eb;         /* texto principal */
+      --muted: #94a3b8;        /* texto secundário */
+      --accent: #22d3ee;
+      --ok: #10b981;
+      --warn: #f59e0b;
+      --danger: #ef4444;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(2,6,23,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b1220 0%,#0b1220 50%,#0f172a 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.7);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .brand .logo{width:36px;height:36px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--grad-a),var(--grad-b));box-shadow:var(--shadow)}
+    .brand .title{font-size:1.05rem}
+    .nav a.btn{padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+    .call{display:flex;gap:10px;align-items:center}
+    .cta{background:linear-gradient(135deg,var(--grad-a),var(--grad-b));padding:10px 16px;border-radius:999px;font-weight:700;box-shadow:var(--shadow)}
+    /* Hero */
+    .hero{position:relative;overflow:hidden}
+    .hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:64px 0}
+    .badge{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.35);font-size:.9rem;color:#a5f3fc}
+    h1{font-size:clamp(2rem,4vw,3rem);line-height:1.12;margin:18px 0 10px;font-weight:900}
+    .lead{font-size:1.1rem;color:var(--muted);max-width:52ch}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+    .chip{padding:8px 12px;border:1px solid rgba(255,255,255,.1);border-radius:999px;color:#cbd5e1}
+    .hero-card{background:radial-gradient(1200px 400px at 10% -20%,rgba(34,211,238,.15),transparent),radial-gradient(900px 300px at 120% 10%,rgba(14,165,233,.18),transparent);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .hero-card .item{background:rgba(2,6,23,.5);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:14px}
+    .hero-illus{position:relative;height:100%;min-height:300px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.06);background:linear-gradient(135deg,rgba(14,165,233,.15),rgba(34,211,238,.12));box-shadow:var(--shadow)}
+    .logo-container {
+  display: flex;
+  flex-direction: column; /* uma embaixo da outra */
+  align-items: center;    /* centraliza no meio */
+}
+
+.logo {
+  max-width: 500px; /* ajuste como quiser */
+  height: auto;
+}
+
+.sub-logo {
+  max-width: 400px; /* menorzinha que a de cima */
+  margin-top: 10px; /* espaço entre elas */
+  height: auto;
+}
+.bubbles, .bubble {
+  pointer-events: none;
+}
+    .bubbles{position:absolute;inset:0;overflow:hidden}
+    .bubble{position:absolute;border-radius:999px;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.9),rgba(255,255,255,.05));opacity:.12;animation:float 12s linear infinite}
+    .bubble:nth-child(1){width:160px;height:160px;left:10%;bottom:-40px}
+    .bubble:nth-child(2){width:220px;height:220px;right:5%;top:-60px;animation-duration:16s}
+    .bubble:nth-child(3){width:90px;height:90px;left:45%;top:40%;animation-duration:10s}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-18px)}100%{transform:translateY(0)}}
+    /* Sections */
+    section{padding:64px 0}
+    .section-title{font-size:1.8rem;margin:0 0 8px;font-weight:900}
+    .section-sub{color:var(--muted);margin-bottom:28px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .card{background:rgba(15,23,42,.7);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:20px}
+    .card h3{margin:0 0 6px}
+    .icon{width:28px;height:28px}
+    .price{font-size:1.6rem;font-weight:900}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.35);color:#a7f3d0;font-size:.9rem}
+    /* Highlights */
+    .highlights{display:grid;grid-template-columns:1.2fr 1fr;gap:22px}
+    .list{display:grid;gap:10px}
+    .li{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px dashed rgba(255,255,255,.08);border-radius:14px}
+    /* FAQ */
+    details{background:rgba(2,6,23,.45);border:1px solid rgba(255,255,255,.08);padding:14px 16px;border-radius:14px}
+    details+details{margin-top:10px}
+    summary{cursor:pointer;font-weight:700}
+    /* Footer */
+    footer{padding:36px 0;border-top:1px solid rgba(255,255,255,.06);color:#a3a3a3}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
+    .foot-brand{display:flex;align-items:center;gap:12px}
+    .small{font-size:.92rem;color:var(--muted)}
+    /* Responsive */
+    @media (max-width:980px){
+      .hero .wrap{grid-template-columns:1fr;gap:24px}
+      .highlights{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:680px){
+      .grid.cols-3,.grid.cols-2{grid-template-columns:1fr}
+      .nav .hide-sm{display:none}
+    }
+    /* Floating actions */
+    .fab{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:12px;z-index:60}
+    .fab a{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:999px;background:linear-gradient(135deg,var(--grad-a),var(--grad-b));box-shadow:var(--shadow);font-weight:800}
+    .button-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.botao {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+.botao.ligar {
+  background: #00bfff;
+}
+
+.botao.ligar:hover {
+  background: #0099cc;
+}
+
+.botao.whatsapp {
+  background: #25d366;
+}
+
+.botao.whatsapp:hover {
+  background: #1ebe57;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#topo" class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- Snowflake / cool icon -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="Logo_Rufino.png">
+            <path d="M12 2v20M4.93 4.93l14.14 14.14M2 12h20M4.93 19.07L19.07 4.93" stroke="#fff" stroke-opacity=".9" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="title">REFRIGERAÇÃO RUFINO</div>
+      </a>
+      <nav class="call">
+        <a class="btn hide-sm" href="#servicos">Serviços</a>
+        <a class="btn hide-sm" href="#sobre">Sobre</a>
+        <a class="btn hide-sm" href="#faq">FAQ</a>
+        <a class="cta" href="tel:+5521973620061" aria-label="Ligar agora">📞 Ligar</a>
+        <a class="cta" href="https://wa.me/5521973620061?text=Ol%C3%A1%2C+vim+do+site+e+quero+um+or%C3%A7amento" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">💬 WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="topo" class="hero">
+    <div class="container wrap">
+      <div>
+        <span class="badge">⚡ Atendimento rápido · Todo Rio de Janeiro </span>
+        <h1>Conserto de Geladeiras & Ar-Condicionado <br/> com <span style="background:linear-gradient(135deg,var(--grad-a),var(--grad-b));-webkit-background-clip:text;background-clip:text;color:transparent">garantia e preço justo</span></h1>
+        <p class="lead">Técnicos especializados em refrigeração doméstica e comercial. Reparo, instalação e manutenção preventiva das principais marcas. Saímos hoje mesmo para atender você.</p>
+        <div class="chips">
+          <span class="chip">📍 Atendimento em domicílio</span>
+          <span class="chip">🕒 Emergência 24h*</span>
+          <span class="chip">🧊 Peças originais</span>
+          <span class="chip">💳 Pix · Cartão</span>
+        </div>
+        <div class="button-container">
+  <a href="tel:+5521973620061" class="botao ligar">
+    📞 Ligar agora
+  </a>
+
+  <a href="https://wa.me/5521973620061" target="_blank" class="botao whatsapp">
+    💬 Orçamento no WhatsApp
+  </a>
+</div>
+        <p class="small" style="margin-top:10px">* Consulte disponibilidade de plantão noturno/finais de semana.</p>
+        <div class="hero-card" style="margin-top:22px">
+          <div class="item">
+            <h3>Geladeiras & Freezers</h3>
+            <p class="small">Não gela, faz gelo na parede, barulho estranho, vazamento, troca de termostato, compressor e gás.</p>
+          </div>
+          <div class="item">
+            <h3>Ar-Condicionado</h3>
+            <p class="small">Instalação split, limpeza completa, vazamento, baixo rendimento, troca de capacitor e manutenção preventiva.</p>
+          </div>
+          <div class="item">
+            <h3>Comercial</h3>
+            <p class="small">Expositores, balcões frios, câmaras frigoríficas e geladeiras industriais com atendimento prioritário.</p>
+          </div>
+          <div class="item">
+            <h3>Garantia</h3>
+            <p class="small">Serviços com garantia e nota. Transparência no diagnóstico antes de qualquer serviço.</p>
+          </div>
+        </div>
+      </div>
+  <div class="logo-container">
+  <img src="img/geladeiras.png" alt="logo" class="logo">
+  <img src="img/logo.png" alt="sub-logo" class="sub-logo">
+  </div>
+          <div class="bubbles"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>     
+      </div>
+    </div>
+  </main>
+
+  <section id="servicos">
+    <div class="container">
+      <h2 class="section-title">Serviços</h2>
+      <p class="section-sub">Trabalhamos com as principais marcas do mercado: Brastemp, Consul, Electrolux, Samsung, LG, Midea, Springer e mais.</p>
+      <div class="grid cols-3">
+        <article class="card">
+          <div class="tag">🧊 Geladeiras</div>
+          <h3>Diagnóstico & Reparo</h3>
+          <p class="small">Avaliação técnica completa. Troca de compressores, placas, termostatos, sensores e relés. Reaperto de conexões e eliminação de vazamentos.</p>
+          <p class="price">a partir de R$ 120</p>
+        </article>
+        <article class="card">
+          <div class="tag">💨 Ar-Condicionado</div>
+          <h3>Instalação & Limpeza</h3>
+          <p class="small">Instalação de split, higienização profunda com limpeza de serpentina, bandeja e ventilador. Reposição de gás e testes.</p>
+          <p class="price">a partir de R$ 180</p>
+        </article>
+        <article class="card">
+          <div class="tag">🏪 Comercial</div>
+          <h3>Manutenção Programada</h3>
+          <p class="small">Planos mensais para estabelecimentos. Revisões periódicas para reduzir paradas e consumo de energia.</p>
+          <p class="price">planos sob medida</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container highlights">
+      <div class="card">
+        <h2 class="section-title">Por que escolher a <span style="color:#7dd3fc">REFRIGERAÇÃO RUFINO</span>?</h2>
+        <div class="list">
+          <div class="li"><span>✅</span><div><strong>Atendimento no mesmo dia</strong><br/><span class="small">Quando possível, deslocamos um técnico ainda hoje para resolver seu problema.</span></div></div>
+          <div class="li"><span>🛡️</span><div><strong>Garantia real</strong><br/><span class="small">Garantia por escrito e nota do serviço prestado. Transparência total.</span></div></div>
+          <div class="li"><span>🔧</span><div><strong>Peças originais</strong><br/><span class="small">Trabalhamos com peças de procedência para maior durabilidade.</span></div></div>
+          <div class="li"><span>💳</span><div><strong>Facilidade no pagamento</strong><br/><span class="small">Pix, débito e crédito. Emissão de NF quando necessário.</span></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 6px">Áreas atendidas</h3>
+        <p class="small">Rio de Janeiro. Consulte taxa de visita.</p>
+        <ul class="small" style="line-height:1.9">
+          <li>Centro • Zona Norte • Zona Sul</li>
+          <li>Zona Leste • Zona Oeste • Região Metropolitana</li>
+          <li>Condomínios e comércios</li>
+        </ul>
+        <hr style="border-color:rgba(255,255,255,.08);margin:16px 0">
+        <h3 style="margin:0 0 6px">Horário de atendimento</h3>
+        <p class="small">24 HORAS</p>
+        <a class="cta" href="https://wa.me/5521973620061?text=Quero+agendar+uma+visita">Agendar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="container">
+      <h2 class="section-title">Sobre nós</h2>
+      <p class="section-sub">Mais de <strong>10 anos</strong> cuidando da refrigeração dos nossos clientes com profissionalismo e respeito.</p>
+      <div class="grid cols-2">
+        <article class="card">
+          <h3>Missão</h3>
+          <p class="small">Resolver seu problema com rapidez, preço justo e segurança. Nosso compromisso é com a sua tranquilidade e o bom funcionamento dos seus equipamentos.</p>
+        </article>
+        <article class="card">
+          <h3>Valores</h3>
+          <p class="small">Transparência no diagnóstico, ética no atendimento e qualidade no resultado. Cada serviço é tratado como se fosse em nossa própria casa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2 class="section-title">Dúvidas frequentes</h2>
+      <div class="grid cols-2">
+        <div>
+          <details>
+            <summary>Vocês cobram visita técnica?</summary>
+            <p class="small">Sim, cobramos uma taxa para deslocamento e diagnóstico. Em caso de aprovação do serviço, a taxa pode ser abatida.</p>
+          </details>
+          <details>
+            <summary>Trabalham com todas as marcas?</summary>
+            <p class="small">Atendemos as principais marcas do mercado. Em casos específicos, confirmamos a disponibilidade de peças antes.</p>
+          </details>
+          <details>
+            <summary>Emitimos nota e garantia?</summary>
+            <p class="small">Sim, oferecemos nota e garantia de acordo com o serviço realizado e peça trocada.</p>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>Qual o prazo de atendimento?</summary>
+            <p class="small">Na maioria dos casos, conseguimos agendar para o mesmo dia ou próximo dia útil.</p>
+          </details>
+          <details>
+            <summary>Fazem contrato de manutenção para empresas?</summary>
+            <p class="small">Sim, montamos planos personalizados para reduzir paradas e custos com energia.</p>
+          </details>
+          <details>
+            <summary>Formas de pagamento?</summary>
+            <p class="small">Pix, débito e crédito. Consulte condições para parcelamento.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container card" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>
+        <h2 class="section-title" style="margin:0">Precisa de ajuda agora?</h2>
+        <p class="section-sub" style="margin:6px 0 0">Chame no WhatsApp ou ligue para falar com um técnico.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="cta" href="https://wa.me/5521973620061?text=Ol%C3%A1%2C+preciso+de+ajuda+com+minha+geladeira%2Far">WhatsApp</a>
+        <a class="cta" href="tel:5521973620061">Ligar agora</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="foot-brand">
+        <div class="logo" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2v20M4.93 4.93l14.14 14.14M2 12h20M4.93 19.07L19.07 4.93" stroke="#fff" stroke-opacity=".9" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <strong>REFRIGERAÇÃO RUFINO</strong><br/>
+          <span class="small">Assistência Técnica — Refrigeração & Climatização</span>
+        </div>
+      </div>
+      <div>
+        <strong>Contato</strong>
+        <p class="small" style="margin:8px 0 0">📞 <a href="tel:+5521973620061">(21) 97362-0061</a><br/>
+        💬 <a href="https://wa.me/5521973620061?text=Ol%C3%A1%2C+vim+do+site">(21) 97362-0061</a><br/>
+        ✉️ <a href="mailto:EMAIL_ADDRESS">tiagoesperanca03@gmail.com</a></p>
+      </div>
+      <div>
+        <strong>Site desenvolvido por:</strong>
+        <p class="small" style="margin:8px 0 0">Natasha Vigilato<br/>CEO</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top:16px">
+      <p class="small">© <span id="year"></span> REFRIGERAÇÃO RUFINO. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="fab" aria-label="Ações rápidas">
+    <a href="https://wa.me/5521973620061?text=Ol%C3%A1%2C+vim+do+site" target="_blank" rel="noopener">💬 WhatsApp</a>
+    <a href="tel:+5521973620061">📞 Ligar</a>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
